@@ -50,3 +50,22 @@ console.log("User Category:", userCategory);
 let authenticationStatus = isAuthenticated ? "Authenticated" : "Not authenticated";
 
 console.log("Authentication Status:", authenticationStatus);
+
+const user = "Employee"
+// const user = "Enrolled Memeber"
+// const user = "Subscriber"
+// const user = "Visitor"
+
+switch (user) {
+    case "Employee":
+    case "Subscriber":
+        console.log(`User proflie: ${user}\n You are authorised for: Dietary Services`);
+        break;
+    case "Enrolled Memeber":
+        console.log(`User proflie: ${user}\n You are authorised for: Dietary Services and Dietician One-on-One`);
+        break;
+    
+    default:
+        console.log(`User proflie: ${user}\n You need to enroll or at least subscribe first to avail this facility.`)
+        break;
+}
