@@ -17,3 +17,8 @@ function checkCountValue(){
         alert("You have 20 followers!");
     }
 }
+
+function resetCount(){
+    count = 0;
+    document.getElementById('countDisplay').innerHTML=count;
+}
