@@ -27,7 +27,8 @@ function showBooks(){
         <p><strong>Author Name:</strong> ${book.authorName}</p>
         <p><strong>Book Description:</strong> ${book.bookDescription}</p>
         <p><strong>Number of Pages:</strong> ${book.pagesNumber}</p>
-    `)
+        <button onclick=(deleteBook(${index}))>Delete</button>
+    `).join("")
     document.getElementById("books").innerHTML = booksDiv;
 }
 
@@ -36,4 +37,17 @@ function clearInputs(){
     document.getElementById('authorName').value = '';
     document.getElementById('bookDescription').value = '';
     document.getElementById('pagesNumber').value = '';
+}
+
+function deleteBook(index){
+    console.log('clicked and deleted ID: ' + index );
+    books.splice(index, 1);
+    
+    // show remaining books
+    if (books.length){
+        showBooks();
+    } else {
+        document.getElementById("books").innerHTML = "";
+        alert('There are no more books');
+    }
 }
