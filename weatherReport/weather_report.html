@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather Report</title>
+</head>
+<body>
+    <h1>City Weather Report</h1>
+
+    <form id="weatherForm">
+        <label for="city">Enter City:</label>
+        <input type="text" id="city" name="city">
+        <button type="submit">Get City Weather</button>
+    </form>
+
+    <hr />
+    <h1>Lat/Long Weather Report</h1>
+    <p>Enter the latitude and longitude and we'll see what we got</p>
+    <p><i>Example - London, UK is at: Lat 51.507351 Long -0.127758</i></p>
+    
+    <form id="latlongWeatherForm">
+        <label for="lat">Enter Latitude</label>
+        <input type="number" id="latID" name="lat" value="48.856613">
+        <label for="long">Enter Longitude</label>
+        <input type="number" id="longID" name="long" value="2.352222">
+        
+        <button type="submit">Get Lat/Long Weather</button>
+    </form>
+
+    <div id="weatherInfo"></div>
+
+    <script src="./weather_report.js"></script>
+</body>
+</html>
